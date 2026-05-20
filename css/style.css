@@ -1,0 +1,13 @@
+.cabecalho {
+    color: black;
+    text-align: center;
+}
+
+.container {
+    background-color: rgb(167, 151, 151);
+    color: black;
+    text-align: center;
+    max-width: 600px;
+    border-radius: 5px;
+    padding: 10px;
+}
