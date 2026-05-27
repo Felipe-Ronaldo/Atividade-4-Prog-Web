@@ -1,34 +1,111 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Saira+Stencil:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* Reset e Configurações Gerais */
 * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: "Saira Stencil", sans-serif;
 }
 
 body {
-    margin: 0;
-    padding: 0;
     background-image: url("../img/background.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     min-height: 100vh;
-    margin: 0;
-    box-sizing: border-box;
-    min-height: 100vh; /* Garante que o corpo ocupe toda a altura da tela */
+    
+    /* Alinhamento Centralizado */
     display: flex;
+    flex-direction: column; 
     justify-content: center;    
-    flex-direction: column; /* Alinha o cabeçalho e o container em coluna */
-    align-items: center; /* Centraliza horizontalmente */
+    align-items: center; 
+    
+    /* Espaçamento interno para telas pequenas não colarem nas bordas */
+    padding: 20px; 
 }
 
+/* Container Estilo "Glassmorphism" (Efeito Vidro) */
 .container {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.65); /* Um pouco mais visível */
+    backdrop-filter: blur(8px); /* Desfoca o fundo, dando um ar premium e misterioso */
+    -webkit-backdrop-filter: blur(8px); /* Suporte para navegadores Safari */
     
-    color: black;
+    color: #111111; /* Preto levemente suavizado para não cansar os olhos */
     text-align: center;
     max-width: 600px;
-    width: 100%; /* Garante que ele seja responsivo em telas menores */
+    width: 100%; 
     border-radius: 20px;
-    padding: 10px;
+    padding: 35px 25px; /* Mais espaço interno para o texto respirar */
+    
+    /* Sombra interna e externa para dar profundidade */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 
+                inset 0 0 0 1px rgba(255, 255, 255, 0.4); 
+}
+
+/* Estilização dos textos dentro do container */
+.container h1 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.container p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Container para agrupar as escolhas se houver mais de uma */
+.choices-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 25px; /* Mantém o espaçamento combinado */
+}
+
+/* Botão Customizado (Melhorado para links e botões) */
+.btn-custom {
+    /* Reseta estilos padrões */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    outline: none;
+    
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #ffffff;
+    
+    padding: 16px 30px;
+    font-size: 1.15rem;
+    text-transform: uppercase; 
+    letter-spacing: 1.5px;
+    border-radius: 12px;
+    cursor: pointer;
+    
+    /* Garante comportamento correto caso use a tag <a> */
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    
+    /* Transições ultra suaves */
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Efeito Hover (Passar o Mouse) */
+.btn-custom:hover {
+    background-color: rgba(20, 20, 20, 0.95);
+    transform: translateY(-2px) scale(1.01); /* Sobe de leve em vez de só dar zoom */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    border-color: rgba(255, 255, 255, 0.3); /* Acende uma bordinha discreta */
+}
+
+/* Efeito Active (Ao Clicar) */
+.btn-custom:active {
+    transform: translateY(1px) scale(0.99); /* Afunda simulando um clique real */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
