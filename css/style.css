@@ -26,20 +26,19 @@ body {
     padding: 20px; 
 }
 
-/* Container Estilo "Glassmorphism" (Efeito Vidro) */
+/* Container Estilo */
 .container {
-    background-color: rgba(255, 255, 255, 0.65); /* Um pouco mais visível */
-    backdrop-filter: blur(8px); /* Desfoca o fundo, dando um ar premium e misterioso */
-    -webkit-backdrop-filter: blur(8px); /* Suporte para navegadores Safari */
+    background-color: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     
-    color: #111111; /* Preto levemente suavizado para não cansar os olhos */
+    color: #111111;
     text-align: center;
     max-width: 600px;
     width: 100%; 
     border-radius: 20px;
-    padding: 35px 25px; /* Mais espaço interno para o texto respirar */
+    padding: 35px 25px;
     
-    /* Sombra interna e externa para dar profundidade */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 
                 inset 0 0 0 1px rgba(255, 255, 255, 0.4); 
 }
@@ -50,6 +49,7 @@ body {
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 1px;
+    transition: opacity 0.15s ease-in-out; 
 }
 
 .container p {
@@ -65,12 +65,11 @@ body {
     gap: 12px;
     width: 100%;
     max-width: 600px;
-    margin-top: 25px; /* Mantém o espaçamento combinado */
+    margin-top: 25px;
 }
 
-/* Botão Customizado (Melhorado para links e botões) */
+/* Botão Customizado */
 .btn-custom {
-    /* Reseta estilos padrões */
     border: 1px solid rgba(255, 255, 255, 0.1);
     outline: none;
     
@@ -84,14 +83,12 @@ body {
     border-radius: 12px;
     cursor: pointer;
     
-    /* Garante comportamento correto caso use a tag <a> */
     text-decoration: none;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     
-    /* Transições ultra suaves */
     transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
@@ -99,13 +96,13 @@ body {
 /* Efeito Hover (Passar o Mouse) */
 .btn-custom:hover {
     background-color: rgba(20, 20, 20, 0.95);
-    transform: translateY(-2px) scale(1.01); /* Sobe de leve em vez de só dar zoom */
+    transform: translateY(-2px) scale(1.01); 
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
-    border-color: rgba(255, 255, 255, 0.3); /* Acende uma bordinha discreta */
+    border-color: rgba(255, 255, 255, 0.3); 
 }
 
 /* Efeito Active (Ao Clicar) */
 .btn-custom:active {
-    transform: translateY(1px) scale(0.99); /* Afunda simulando um clique real */
+    transform: translateY(1px) scale(0.99); 
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
