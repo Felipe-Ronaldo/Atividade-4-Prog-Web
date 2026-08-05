@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
     
-    // --- EFEITO DIGITAÇÃO ---
     const textElement = document.querySelector(".container h3");
     if (textElement) {
         const fullText = textElement.textContent;
